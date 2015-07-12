@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Array Methods</title>
+	<script>
+	var units =[
+	{name: "Ernie", GBHD: 500, GBHDFree: 300, OS: "Windows"}, 
+	{name: "Bert", GBHD: 800, GBHDFree: 350, OS: "MacOS"}, 
+	{name: "Kermit", GBHD: 600, GBHDFree: 380, OS: "Windows"},
+	{name: "Oscar", GBHD: 450, GBHDFree: 200, OS: "Windows"},
+	{name: "Grover", GBHD: 700, GBHDFree: 300, OS: "MacOS"},	
+	{name: "Count", GBHD: 700, GBHDFree: 250, OS: "MacOS"}
+	];
+	var getPercentageFree = function(unit){
+		var free = unit.GBHDFree;
+		var totalFree = units.map(function(unit){return unit.GBHDFree}).reduce(function(start, current){
+			return start + current;
+		}, 0);
+		return (free / totalFree) * 100;
+	}
+	
+	console.log(units.map(getPercentageFree));
+	
+	</script>
+  </head>
+  <body>
+    <h1>Calling Inner Array Methods</h1>
+  </body>
+</html>

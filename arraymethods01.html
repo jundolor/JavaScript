@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Array Methods</title>
+	<script>
+	var maxCols = function(rows){
+		return rows[3].map(function(_, i){
+			return rows.reduce(function(start, row){
+				return start + row[i];
+			}, 0);
+		});
+	}
+	rows = [
+	 [16, 25, 72],
+	 [7, 30, 65],
+	 [20, 27, 75],
+	 [28, 15, 50]
+	];
+	console.log(maxCols(rows));
+	</script>
+  </head>
+  <body>
+    <h1>Calling JavaScript Array methods within methods</h1>
+  </body>
+</html>
