@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Array Methods</title>
+	<script>
+	rows = [
+	 [16, 25, 72],
+	 [7, 30, 65],
+	 [20, 27, 75],
+	 [28, 15, 50]
+	];
+	var getSumCols = function(rows){
+		return rows[0].map(function(indRow0, i){return rows.reduce(function(start, row){return start + row[i];}, 0);});
+	}
+	
+	var sumColsArr = getSumCols(rows);
+	console.log(sumColsArr);
+	
+	</script>
+  </head>
+  <body>
+    <h1>Title</h1>
+  </body>
+</html>
